@@ -1,0 +1,221 @@
+:root {
+    --clr-primary-100:hsl(0, 100%, 74%);
+    --clr-primary-200: hsl(154, 59%, 51%);
+  
+    --clr-secondary-100:  hsl(248, 32%, 49%);
+    --clr-secondary-200: hsl(249, 10%, 26%) ;
+    --clr-secondary-300: hsl(246, 25%, 77%);
+  
+    --ff-base: "Poppins", sans-serif;;
+    --ff-accent:;
+  
+    --fw-light: 400;
+    --fw-regular: 500;
+    --fw-semi-bold: 600;
+    --fw-bold: 700;
+  
+    --fs-base: 16px;
+  
+  
+  /*
+    1. Use a more-intuitive box-sizing model.
+  */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  /*
+    2. Remove default margin
+  */
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  /*
+    Typographic tweaks!
+    3. Add accessible line-height
+    4. Improve text rendering
+  */
+  body {
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+  }
+  /*
+    5. Improve media defaults
+  */
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  /*
+    6. Remove built-in form typography styles
+  */
+  input, button, textarea, select {
+    font: inherit;
+  }
+  /*
+    7. Avoid text overflows
+  */
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+  body{
+    background: url(images/bg-intro-mobile.png) no-repeat;
+    background-position: center;
+    background-color: var(--clr-primary-100);
+    font-size: var(--fs-base);
+    font-family: var(--ff-base);
+    text-align: center;
+    color: white;
+  }
+  .main{
+    padding-block: 80px;
+    padding-inline: 25px;
+  }
+  h1{
+    font-size: 25px;
+  }
+  .title p{
+    line-height: 1.7;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  .price{
+    background-color: var(--clr-secondary-100);
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 40px;
+    box-shadow: 0 7px 1px rgba(77, 72, 72, 0.3);
+    font-size: 0.63rem;
+    text-wrap: balance;
+    line-height: 2;
+  }
+  .price span{
+    font-weight: var(--fw-light);
+  }
+  .form-box{
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 7px 1px rgba(77, 72, 72, 0.3);
+    margin-top: 20px;
+    padding: 20px;
+    position: relative;
+    width: 100%;
+  }
+  .form-box p{
+    font-size: 10px;
+    font-weight: var(--fw-regular);
+    color: var(--clr-secondary-300);
+    padding-inline: 15px;
+    line-height: 1.5;
+  }
+  .form-box span{
+    font-weight: var(--fw-semi-bold);
+    color: var(--clr-primary-100);
+  }
+  input{
+    display: grid;
+    width: 100%;
+    margin-top: 15px;
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--clr-secondary-300);
+  }
+  input:focus{
+    outline: 0;
+    border-color: var(--clr-secondary-100); 
+  }
+  .input-box{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    flex-wrap: wrap;
+    font-size: 10px;
+    line-height: 2;
+  }
+  .icon-error{
+    width: 20px;
+    position: absolute;
+    transform: translateY(-10%);
+    right: 12%;
+    display: none;
+  }
+
+  .input-box.error input {
+    border-color: var(--clr-primary-100);
+  }
+
+  .errorMsg {
+    color: rgb(239, 106, 106);
+    font-weight: var(--fw-light);
+    font-size: 10px;
+    /* position: relative; */
+    /* left: 18px; */
+    /* margin-bottom: 10px; */
+    /* display: none; */
+    font-style: italic;
+  }
+  button{
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+    background-color: var(--clr-primary-200);
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%;
+    margin-block: 15px;
+    box-shadow: 0 3px hsl(154, 57%, 42%);
+  }
+  button:hover{
+    opacity: 0.7;
+  }
+
+  @media only screen and (min-width: 650px){
+    
+    body{
+      background-image: url(images/bg-intro-desktop.png);
+      background-size: cover;
+      height: 100vh;
+    }
+    .main{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      margin-inline: 120px;
+    }
+    .title{
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      width: 80%;
+      place-self: center;
+    }
+    h1{
+      font-size: 45px;
+    }
+    .title p{
+      font-size: var(--fs-base);
+    }
+    .box{
+      place-self: center;
+      grid-column: 2/3;
+    }
+    .form-box{
+      padding: 30px;
+    }
+    input{
+      font-size: 14px;
+      font-weight: var(--fw-semi-bold);
+    }
+   
+  
+    }
+
+
+
+
+
+  
+  @media screen and (max-width: 650px){
+  }
